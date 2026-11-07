@@ -2,6 +2,8 @@
 
 In-process EAT patching for a .NET app whose licensing lives in a native DLL.
 
+**English** | [中文](README.zh-CN.md) | [日本語](README.ja.md)
+
 The app I was looking at ships as a managed WinForms shell plus one native
 licence DLL. All the interesting logic is in the DLL; the managed side only
 declares 18 `DllImport`s and draws the window. This repo is the launcher I
@@ -145,6 +147,12 @@ cfg block. `CfgOn` and `StrInit` in `launch.cs` select behaviour by slot index.
 - The `--verbose` mode still leaves the app's own window management quirks: the
   main window has no caption (`style=0x16030000`) and refuses external moves
   unless `SWP_NOSENDCHANGING` is set.
+
+## Further reading
+
+- [Technical write-up (English)](docs/analysis.md) — the full decision trail,
+  every experiment that failed and why.
+- [技术分析（中文）](docs/技术分析.md) — same content in Chinese.
 
 ## What is not in here
 
