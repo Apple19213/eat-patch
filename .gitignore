@@ -1,0 +1,18 @@
+# 编译产物与本地文件
+build/*.exe
+build/*.bin
+build/*.lst
+src/*.lst
+
+# 目标程序的任何二进制/派生数据（本仓库不应包含）
+*.dll
+*.exe
+!build/.gitkeep
+
+# 分析产出
+*.il
+*.bin
+*.pkl
+*.log
+dump/
+decomp/
